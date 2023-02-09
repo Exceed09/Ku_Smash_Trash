@@ -2,6 +2,7 @@
 // import { GiChiliPepper } from "react-icons/gi"
 // import { FaSeedling } from "react-icons/fa"
 // import {AiFillBulb} from "react-icons/ai"
+import Status from "./Status"
 
 const BCard = ({ id, location, status, zone, in_charge, contact, image = "/bin.png", changeclick }) => {
   return (
@@ -16,7 +17,7 @@ const BCard = ({ id, location, status, zone, in_charge, contact, image = "/bin.p
       </div>
       <div className="bcard-body">
         <br></br>
-        <div className="status"> {`Status : ${status}`}</div>
+        <Status num={status}></Status>
         <div className="ocation">
           <p>Location</p>
           {location}
