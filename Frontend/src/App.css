@@ -64,10 +64,15 @@ body {
     width: 100%;
     height: auto;
     background-color: beige;
-    border-radius: 5%;
+    border-radius: 25px;
     overflow: hidden;
     flex: 0 0 15%;
     margin: 1rem;
+}
+
+.status{
+    font-weight: bold;
+    color: rgb(0, 220, 37);
 }
 
 .card-header {
@@ -97,7 +102,6 @@ body {
 .home-menulist {
     width: 100vw;
     display: flex;
-    column-gap: 5%;
     flex-wrap: wrap;
     justify-content: center;
 }

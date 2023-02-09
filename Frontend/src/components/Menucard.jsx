@@ -1,4 +1,5 @@
 import React from "react"
+import Status from "./Status"
 
 const Card = ({ id, location, status, zone, in_charge, contact, image = "/bin.png", changeclick }) => {
   return (
@@ -13,12 +14,11 @@ const Card = ({ id, location, status, zone, in_charge, contact, image = "/bin.pn
       </div>
       <div className="card-body">
         <br></br>
-        <div className="status"> {`Status : ${status}`}</div>
+        <Status num={status}></Status>
         <div className="location">
           <p>Location</p>
           {location}
         </div>
-        <br></br>
         <br></br>
       </div>
     </div>
