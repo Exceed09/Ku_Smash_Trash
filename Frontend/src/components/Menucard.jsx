@@ -10,7 +10,7 @@ const Card = ({ id, location, status, zone, in_charge, contact, image = "/bin.pn
       }}
     >
       <div className="card-header">
-        <img src={image} alt="bin" className="card-img" />
+        <img src={image} alt="building" className="card-img" />
       </div>
       <div className="card-body">
         <br></br>

@@ -1,13 +1,19 @@
+import {
+  Route,
+  Routes,
+} from "react-router-dom";
 import React from "react"
-import Nav from "./components/Nav.jsx"
+import MapPage from "./pages/MapPage.jsx"
 import Home from "./pages/Home.jsx"
 import "./App.css"
 
 function App() {
   return (
     <>
-      <Nav />
-      <Home></Home>
+      <Routes>
+        <Route path="/*" element={<MapPage />} />
+        <Route path="/home/:zone" element={<Home />} />
+      </Routes>
       {/* <svg width="640" height="480">
         <g className="layer">
           <title>Layer 1</title>

@@ -12,7 +12,7 @@ const BCard = ({ id, location, status, zone, in_charge, contact, image = "/bin.p
       }}
     >
       <div className="bcard-header">
-        <img src={image} alt="bin" className="card-img" />
+        <img src={image} alt="building" className="card-img" />
       </div>
       <div className="bcard-body">
         <br></br>
