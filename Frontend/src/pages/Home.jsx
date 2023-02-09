@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
-import { getAllBin, getAllBinInZone, getAllStatus } from "../services/request"
+import { getAllBin, getAllBinInZone, getAllStatus } from "../services/Request"
 import Card from "../components/Menucard"
 import BCard from "../components/Bigcard"
 import Nav from "../components/Nav"
+import "../styles/Home.css"
+import { setStatusBinId } from "../services/Request"
 
 function Home() {
   const [statusList, setStatusList] = useState([])
@@ -10,29 +12,34 @@ function Home() {
   const [bigCard, setBigCard] = useState(null)
   const zone = window.location.pathname.split("/")[2]
 
-  let responce
+  const UpdateStatus = (BinList, StatusList) => {
+    BinList.forEach((item) => {
+      StatusList.forEach((status) => {
+        if (item.id === status.id) {
+          if (item.status != status.status) {
+            item.status = status.status
+            setBinList(BinList)
+          }
+        }
+      })
+    })
+  }
 
   useEffect(() => {
-    getAllBinInZone(zone).then((res) => {
-      setBinList(res)
+    getAllBinInZone(zone).then((responce) => {
+      setBinList(responce)
     })
     const interval = setInterval(() => {
-      getAllStatus().then((res) => {
-        // console.log(res)
-        responce = res
-        binList.forEach((item) => {
-          responce.forEach((status) => {
-            if (item.id === status.id) {
-              item.status = status.status
-            }
-          })
-        })
+      getAllStatus().then((responce) => {
+        setStatusList(responce)
       }).catch((err) => {
-        // console.log(err)
+        console.log(err)
       })
     }, 1000);
     return () => clearInterval(interval);
   }, [])
+
+  UpdateStatus(binList, statusList)
 
   return !bigCard ? (
     <div>
@@ -65,6 +72,7 @@ function Home() {
       </div>
     )
 }
+
 
 
 

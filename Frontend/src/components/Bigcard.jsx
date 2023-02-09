@@ -3,6 +3,7 @@
 // import { FaSeedling } from "react-icons/fa"
 // import {AiFillBulb} from "react-icons/ai"
 import Status from "./Status"
+import "../styles/Bigcard.css"
 
 const BCard = ({ id, location, status, zone, in_charge, contact, image = "/bin.png", changeclick }) => {
   return (
@@ -12,13 +13,13 @@ const BCard = ({ id, location, status, zone, in_charge, contact, image = "/bin.p
         changeclick()
       }}
     >
-      <div className="bcard-header">
+      <div>
         <img src={image} alt="building" className="card-img" />
       </div>
       <div className="bcard-body">
         <br></br>
         <Status num={status}></Status>
-        <div className="ocation">
+        <div className="location">
           <p>Location</p>
           {location}
         </div>

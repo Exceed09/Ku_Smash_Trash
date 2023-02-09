@@ -1,5 +1,6 @@
 import React from "react"
 import Status from "./Status"
+import "../styles/Menucard.css"
 
 const Card = ({ id, location, status, zone, in_charge, contact, image = "/bin.png", changeclick }) => {
   return (

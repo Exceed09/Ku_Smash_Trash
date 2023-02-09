@@ -1,0 +1,28 @@
+.card {
+    width: 100%;
+    height: auto;
+    background-color: beige;
+    border-radius: 25px;
+    overflow: hidden;
+    flex: 0 0 15%;
+    margin: 1rem;
+}
+
+.card-header {
+    width: 100%;
+}
+
+.card-img {
+    width: 100%;
+    height: 20%;
+}
+
+.card-body {
+    width: 100%;
+    height: auto;
+    font-size: medium;
+    background-color: beige;
+}
+
+
+/* .location {} */

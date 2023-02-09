@@ -1,0 +1,25 @@
+.bcard {
+    background-color: beige;
+    margin: 1rem;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.bcard-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+/* .location {} */
+
+
+/* .zone {} */
+
+
+/* .in_charge {} */
+
+
+/* .contact {} */

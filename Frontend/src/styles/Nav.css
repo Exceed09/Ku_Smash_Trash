@@ -1,0 +1,25 @@
+.navbar {
+    display: flex;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 179, 30);
+    color: black;
+}
+
+.navbar-a {
+    transition: 0.3s;
+}
+
+.navbar-a:link {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar-a:visited {
+    color: black;
+}
+
+.navbar-a:hover {
+    color: aliceblue;
+}

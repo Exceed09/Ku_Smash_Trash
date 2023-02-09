@@ -1,119 +1,119 @@
 {
-    "data": [
-        {
-            "id": 1,
-            "status": 10,
-            "location": "front of A_building ",
-            "zone": "A",
-            "in_charge": "JiMeow",
-            "contact": "0812345679",
-            "image": "/Photo/EconomicFaculty.png"
-        },
-        {
-            "id": 2,
-            "status": 15,
-            "location": "back of A_building ",
-            "zone": "A",
-            "in_charge": "JiMeow",
-            "contact": "0812345679",
-            "image": "/Photo/HumanitiesFaculty.png"
-        },
-        {
-            "id": 3,
-            "status": 30,
-            "location": "front of A_building ",
-            "zone": "A",
-            "in_charge": "JiMeow",
-            "contact": "0812345679",
-            "image": "/Photo/LiberalArtScienceFaculty.png"
-        },
-        {
-            "id": 4,
-            "status": 75,
-            "location": "front of B_building ",
-            "zone": "B",
-            "in_charge": "JiMeow",
-            "contact": "0812345679",
-            "image": "/Photo/HumanitiesFaculty.png"
-        },
-        {
-            "id": 5,
-            "status": 50,
-            "location": "back of B_building",
-            "zone": "B",
-            "in_charge": "JiMeow",
-            "contact": "0812345679",
-            "image": "/Photo/LiberalArtScienceFaculty.png"
-        },
-        {
-            "id": 6,
-            "status": 80,
-            "location": "front of C_building ",
-            "zone": "C",
-            "in_charge": "JiMeow",
-            "contact": "0812345679",
-            "image": "/Photo/LiberalArtScienceFaculty.png"
-        },
-        {
-            "id": 7,
-            "status": 100,
-            "location": "back of C_building ",
-            "zone": "C",
-            "in_charge": "JiMeow",
-            "contact": "0812345679",
-            "image": "/Photo/HumanitiesFaculty.png"
-        },
-        {
-            "id": 8,
-            "status": 90,
-            "location": "in C_building ",
-            "zone": "C",
-            "in_charge": "JiMeow",
-            "contact": "0812345679",
-            "image": "/Photo/EconomicFaculty.png"
-        },
-        {
-            "id": 8,
-            "status": 90,
-            "location": "in C_building ",
-            "zone": "C",
-            "in_charge": "JiMeow",
-            "contact": "0812345679",
-            "image": "/Photo/EconomicFaculty.png"
-        }
-    ],
-    "status": [
-        {
-            "id": 1,
-            "status": 10
-        },
-        {
-            "id": 2,
-            "status": 15
-        },
-        {
-            "id": 3,
-            "status": 50
-        },
-        {
-            "id": 4,
-            "status": 30
-        },
-        {
-            "id": 5,
-            "status": 75
-        },
-        {
-            "id": 6,
-            "status": 80
-        },
-        {
-            "id": 7,
-            "status": 100
-        },
-        {
-            "id": 8,
-            "status": 90
-        }
-    ]
+  "data": [
+    {
+      "id": 1,
+      "status": 10,
+      "location": "front of A_building ",
+      "zone": "A",
+      "in_charge": "JiMeow",
+      "contact": "0812345679",
+      "image": "/Photo/EconomicFaculty.png"
+    },
+    {
+      "id": 2,
+      "status": 15,
+      "location": "back of A_building ",
+      "zone": "A",
+      "in_charge": "JiMeow",
+      "contact": "0812345679",
+      "image": "/Photo/HumanitiesFaculty.png"
+    },
+    {
+      "id": 3,
+      "status": 30,
+      "location": "front of A_building ",
+      "zone": "A",
+      "in_charge": "JiMeow",
+      "contact": "0812345679",
+      "image": "/Photo/LiberalArtScienceFaculty.png"
+    },
+    {
+      "id": 4,
+      "status": 75,
+      "location": "front of B_building ",
+      "zone": "B",
+      "in_charge": "JiMeow",
+      "contact": "0812345679",
+      "image": "/Photo/HumanitiesFaculty.png"
+    },
+    {
+      "id": 5,
+      "status": 50,
+      "location": "back of B_building",
+      "zone": "B",
+      "in_charge": "JiMeow",
+      "contact": "0812345679",
+      "image": "/Photo/LiberalArtScienceFaculty.png"
+    },
+    {
+      "id": 6,
+      "status": 80,
+      "location": "front of C_building ",
+      "zone": "C",
+      "in_charge": "JiMeow",
+      "contact": "0812345679",
+      "image": "/Photo/LiberalArtScienceFaculty.png"
+    },
+    {
+      "id": 7,
+      "status": 100,
+      "location": "back of C_building ",
+      "zone": "C",
+      "in_charge": "JiMeow",
+      "contact": "0812345679",
+      "image": "/Photo/HumanitiesFaculty.png"
+    },
+    {
+      "id": 8,
+      "status": 90,
+      "location": "in C_building ",
+      "zone": "C",
+      "in_charge": "JiMeow",
+      "contact": "0812345679",
+      "image": "/Photo/EconomicFaculty.png"
+    },
+    {
+      "id": 8,
+      "status": 90,
+      "location": "in C_building ",
+      "zone": "C",
+      "in_charge": "JiMeow",
+      "contact": "0812345679",
+      "image": "/Photo/EconomicFaculty.png"
+    }
+  ],
+  "status": [
+    {
+      "status": 500,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "status": 15
+    },
+    {
+      "id": 3,
+      "status": 50
+    },
+    {
+      "id": 4,
+      "status": 30
+    },
+    {
+      "id": 5,
+      "status": 75
+    },
+    {
+      "id": 6,
+      "status": 80
+    },
+    {
+      "id": 7,
+      "status": 100
+    },
+    {
+      "id": 8,
+      "status": 90
+    }
+  ]
 }

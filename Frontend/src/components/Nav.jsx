@@ -1,3 +1,5 @@
+import "../styles/Nav.css"
+
 function Nav() {
   return (
     <div className="navbar">
