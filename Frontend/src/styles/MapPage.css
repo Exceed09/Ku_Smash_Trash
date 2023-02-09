@@ -1,4 +1,17 @@
-.map-page {
+.map-click {
     display: block;
     margin: auto;
 }
+
+.map-page{
+    background-image: url("../../public/mapp.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.map-zone:hover {
+    filter: drop-shadow(6px 10px 4px rgb(0 0 0 / 0.4));
+    transform: translateY(5px);
+  }
+
+
