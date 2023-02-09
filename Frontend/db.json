@@ -1,0 +1,102 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "status": 10,
+            "location": "front of A building ",
+            "zone": "A building",
+            "in_charge": "JiMeow",
+            "contact": "0812345679"
+        },
+        {
+            "id": 2,
+            "status": 15,
+            "location": "back of A building ",
+            "zone": "A building",
+            "in_charge": "JiMeow",
+            "contact": "0812345679"
+        },
+        {
+            "id": 3,
+            "status": 30,
+            "location": "front of A building ",
+            "zone": "A building",
+            "in_charge": "JiMeow",
+            "contact": "0812345679"
+        },
+        {
+            "id": 4,
+            "status": 75,
+            "location": "front of B building ",
+            "zone": "B building",
+            "in_charge": "JiMeow",
+            "contact": "0812345679"
+        },
+        {
+            "id": 5,
+            "status": 50,
+            "location": "back of B building",
+            "zone": "B building",
+            "in_charge": "JiMeow",
+            "contact": "0812345679"
+        },
+        {
+            "id": 6,
+            "status": 80,
+            "location": "front of C building ",
+            "zone": "C building",
+            "in_charge": "JiMeow",
+            "contact": "0812345679"
+        },
+        {
+            "id": 7,
+            "status": 100,
+            "location": "back of C building ",
+            "zone": "C building",
+            "in_charge": "JiMeow",
+            "contact": "0812345679"
+        },
+        {
+            "id": 8,
+            "status": 90,
+            "location": "in C building ",
+            "zone": "C building",
+            "in_charge": "JiMeow",
+            "contact": "0812345679"
+        }
+    ],
+    "status": [
+        {
+            "id": 1,
+            "status": 10
+        },
+        {
+            "id": 2,
+            "status": 15
+        },
+        {
+            "id": 3,
+            "status": 50
+        },
+        {
+            "id": 4,
+            "status": 30
+        },
+        {
+            "id": 5,
+            "status": 75
+        },
+        {
+            "id": 6,
+            "status": 80
+        },
+        {
+            "id": 7,
+            "status": 100
+        },
+        {
+            "id": 8,
+            "status": 90
+        }
+    ]
+}
