@@ -1,10 +1,9 @@
 .card {
-    width: 100%;
+    width: 300px;
     height: auto;
     background-color: beige;
     border-radius: 25px;
     overflow: hidden;
-    flex: 0 0 15%;
     margin: 1rem;
 }
 
@@ -20,7 +19,7 @@
 .card-body {
     width: 100%;
     height: auto;
-    font-size: 22px;
+    font-size: 18px;
     background-color: beige;
 }
 
