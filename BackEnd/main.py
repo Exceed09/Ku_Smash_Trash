@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import all_bins, bin, zone
+from routers import all_bins, bin, zone, line
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -15,6 +15,8 @@ app.add_middleware(
 app.include_router(all_bins.router)
 app.include_router(bin.router)
 app.include_router(zone.router)
+app.include_router(line.router)
+
 
 @app.get("/")
 def root():
