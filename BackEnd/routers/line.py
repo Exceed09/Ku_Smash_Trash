@@ -10,13 +10,7 @@ router = APIRouter(
 )
 
 
-
-class Event(BaseModel):
-    destination: str
-    events: list
-
-
 @router.get("/webhook")
-def get_info(event: Event = Body):
+def get_info(event: Body()):
     print(event)
     
