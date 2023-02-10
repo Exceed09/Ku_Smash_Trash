@@ -8,10 +8,9 @@ function MapPage() {
         <div>
             <Nav />
             <div className="map-page">
-                {/* <img src="/mapp.png" alt="map"></img> */}
                 <br></br>
                 <br></br>
-                <svg width="1080" height="1180" className="map-click">
+                <svg viewBox="-240 -210 1525 1666" width="1080" height="1180" className="map-click">
                     <g className="layer">
                         <Link to={"/home/A"} className="map-zone">
                             <path d="m353.47,960.91c0,0 25.64,-10.83 26.16,39.69c0.52,50.52 0.52,63.51 0.43,63.12c-0.1,-0.39 2.71,27.81 -19.79,27.81c-22.5,0 -204.59,0 -204.69,-0.39c-0.1,-0.39 -22.4,6.88 -22.4,-35.7c0,-42.58 0.52,-65.68 0.43,-66.06c-0.1,-0.39 -1.99,-30.65 23.12,-30.65c25.12,0 196.74,2.17 196.74,2.17z" fill="#d3d3d3" id="svg_2" stroke="#000000" strokeWidth="3" />
