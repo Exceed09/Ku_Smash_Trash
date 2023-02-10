@@ -11,7 +11,7 @@ export async function getAllBinStatus() {
 }
 
 export async function getAllBinInZone(zone) {
-    const response = await axios.get(`https://ecourse.cpe.ku.ac.th/exceed09/zone/${zone}/`)
+    const response = await axios.get(`https://ecourse.cpe.ku.ac.th/exceed09/zone/${zone}`)
     return response.data.message
 }
 
