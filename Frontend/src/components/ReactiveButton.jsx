@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getResetAverageInZone } from '../services/Request';
+import { getResetAverageInZone } from '../services/Request.js';
 
 // max 10 red   rgb(209, 53, 53)
 // mid 6 yellow  rgb(209, 162, 53)

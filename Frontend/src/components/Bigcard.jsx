@@ -5,7 +5,7 @@
 import Status from "./Status"
 import { useState, useEffect } from "react"
 import "../styles/Bigcard.css"
-import { getBinById } from "../services/Request"
+import { getBinById } from "../services/Request.js"
 
 const BCard = ({ bin_id, location, status, zone, in_charge, contact, image = "/bin.png", changeclick }) => {
   const [data, setData] = useState([])
