@@ -33,7 +33,23 @@ def get_info(event: Event = Body()):
             except LineBotApiError as e:
                 raise e
             raise HTTPException(400, detail="Message send failed")
+
         fernet = Fernet(os.getenv("fernet_key").encode())
+
+        if line.find_one({"secret_key": fernet.encrypt((event.events[0]["source"]["userId"]).encode()).decode()}):
+            try:
+                respond.push_message(event.events[0]["source"]["userId"],
+                                     TextSendMessage(
+                                         text="This name is already in database, please try another name."))
+            except LineBotApiError as e:
+                raise e
+            raise HTTPException(400, detail="Message send failed")
         key = fernet.encrypt(event.events[0]["source"]["userId"].encode())
         line.insert_one({"in_charge": event.events[0]["message"]["text"],
                          "secret_key": key.decode()})
+        try:
+            respond.push_message(event.events[0]["source"]["userId"],
+                                 TextSendMessage(
+                                     text="Name added successfully."))
+        except LineBotApiError as e:
+            raise e
