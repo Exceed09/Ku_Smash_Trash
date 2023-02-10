@@ -6,22 +6,22 @@ import axios from "axios"
 // }
 
 export async function getAllBinStatus() {
-    const response = await axios.get(`http://group9.exceed19.online/all_bins/status`)
+    const response = await axios.get(`http://ecourse.cpe.ku.ac.th/exceed09/all_bins/status`)
     return response.data.message
 }
 
 export async function getAllBinInZone(zone) {
-    const response = await axios.get(`http://group9.exceed19.online/zone/${zone}/`)
+    const response = await axios.get(`http://ecourse.cpe.ku.ac.th/exceed09/zone/${zone}/`)
     return response.data.message
 }
 
 export async function getResetAverageInZone() {
-    const response = await axios.get(`http://group9.exceed19.online/zone/reset_data`)
+    const response = await axios.get(`http://ecourse.cpe.ku.ac.th/exceed09/zone/reset_data`)
     return response.data.message[0]
 }
 
 export async function getBinById(id) {
-    const response = await axios.get(`http://group9.exceed19.online/all_bins/${id}/status`)
+    const response = await axios.get(`http://ecourse.cpe.ku.ac.th/exceed09/all_bins/${id}/status`)
     return response.data
 }
 
