@@ -9,6 +9,12 @@
 
 .navbar-a {
     transition: 0.3s;
+    display: flex;
+}
+
+.trash {
+    margin: auto;
+    padding: 5px;
 }
 
 .navbar-a:link {
