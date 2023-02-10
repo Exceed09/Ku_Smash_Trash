@@ -7,7 +7,8 @@ body {
     height: 100%;
     /* background-color: rgb(0, 97, 154); */
     background-color: rgb(205, 226, 210);
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Jua', sans-serif;
+    font-size: 20px;
 }
 
 .search {

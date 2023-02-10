@@ -17,7 +17,7 @@ const Card = ({ id, location, status, zone, in_charge, contact, image = "/bin.pn
         <br></br>
         <Status num={status}></Status>
         <div className="location">
-          <p>Location</p>
+          <p style={{"fontWeight":"bold"}}>Location</p>
           {location}
         </div>
         <br></br>

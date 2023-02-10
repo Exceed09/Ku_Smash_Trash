@@ -20,11 +20,12 @@ const BCard = ({ id, location, status, zone, in_charge, contact, image = "/bin.p
         <br></br>
         <Status num={status}></Status>
         <div className="location">
-          <p style={{"fontWeight":"bold"}}>Location</p>
+          <div className="loca-head">Location</div>
+          <br></br>
           {location}
         </div>
         <div className="zone">
-          <p>Zone {zone}</p>
+          {`Zone ${zone}`}
         </div>
         <div className="in_charge">
           <p> </p>

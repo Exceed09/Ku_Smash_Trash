@@ -1,7 +1,7 @@
 .bcard {
     background-color: beige;
     margin: 1rem;
-    border-radius: 5%;
+    border-radius: 50px;
     overflow: hidden;
 }
 
@@ -10,8 +10,35 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    font-size: 22px;
 }
 
+
+.location{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.loca-head{
+    margin-left: 8rem;
+    margin-right: 8rem;
+    padding: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 999px;
+    border: 1px solid #489f93;
+    background: #489f93;
+}
+
+.zone{
+    margin: auto;
+    padding: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border: 1px solid #489f93;;
+    border-radius: 999px;
+    background: #489f93;
+}
 
 /* .location {} */
 
