@@ -5,7 +5,7 @@ export async function getAllBin() {
     return response.data
 }
 
-export async function getAllStatus() {
+export async function getAllBinStatus() {
     const response = await axios.get(` http://localhost:3004/status`)
     return response.data
 }
@@ -18,6 +18,14 @@ export async function getAllBinInZone(zone) {
 export async function setStatusBinId(id, status) {
     const response = await axios.put(` http://localhost:3004/status/${id}`, {
         status,
+    })
+    return response.data
+}
+
+export async function setResetAverageBinInZone(zone, reset) {
+    const response = await axios.put(` http://localhost:3004/reset/${zone}`, {
+        reset,
+        zone,
     })
     return response.data
 }

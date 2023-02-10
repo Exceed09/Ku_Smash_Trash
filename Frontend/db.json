@@ -84,7 +84,7 @@
   ],
   "status": [
     {
-      "status": 500,
+      "status": 533,
       "id": 1
     },
     {
@@ -118,14 +118,17 @@
   ],
   "reset": [
     {
-      "reset": 1.5,
-      "zone": "A"
+      "reset": 3,
+      "zone": "A",
+      "id": "A"
     },
     {
+      "id": "B",
       "reset": 20,
       "zone": "B"
     },
     {
+      "id": "C",
       "reset": 7,
       "zone": "C"
     }

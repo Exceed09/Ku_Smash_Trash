@@ -2,11 +2,38 @@ import { Link } from "react-router-dom"
 import Nav from "../components/Nav"
 import ReactiveButton from "../components/ReactiveButton"
 import "../styles/MapPage.css"
+// import { getResetAverageInZone, setResetAverageBinInZone } from "../services/Request"
+// import { useEffect, useState } from "react"
 
 function MapPage() {
+    // const [resetAverage, setResetAverage] = useState([])
+
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         getResetAverageInZone("A").then((responce) => {
+    //             setResetAverage(responce)
+    //         }).catch((err) => {
+    //             console.log(err)
+    //         })
+    //     }, 1000);
+    //     return () => clearInterval(interval);
+    // }, [])
+
     return (
         <div>
             <Nav />
+            {/* {
+                resetAverage.length != 0 &&
+                <button width="20px" height="20px" onClick={e =>
+                    setResetAverageBinInZone("A", resetAverage[0].reset + 0.5)
+                }>Increase Reset Bin A</button>
+            }
+            {
+                resetAverage.length != 0 &&
+                <button width="20px" height="20px" onClick={e =>
+                    setResetAverageBinInZone("A", resetAverage[0].reset - 0.5)
+                }>Decrease Reset Bin A</button>
+            } */}
             <div className="map-page">
                 <br></br>
                 <br></br>
@@ -71,7 +98,7 @@ function MapPage() {
                     </g>
                 </svg>
             </div>
-        </div>
+        </div >
     )
 }
 

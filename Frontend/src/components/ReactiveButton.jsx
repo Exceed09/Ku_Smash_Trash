@@ -11,11 +11,11 @@ const ReactButton = ({ zone, d, fill, id, stroke, strokeWidth, transform }) => {
     useEffect(() => {
         const interval = setInterval(() => {
             getResetAverageInZone(zone).then((responce) => {
-                if(responce.length > 0 && responce[0].reset != resetAverage)
+                if (responce.length > 0 && responce[0].reset != resetAverage)
                     setResetAverage(responce[0].reset)
             }).catch((err) => {
                 console.log(err)
-            } 
+            }
             )
         }, 1000);
         return () => clearInterval(interval);
@@ -25,30 +25,26 @@ const ReactButton = ({ zone, d, fill, id, stroke, strokeWidth, transform }) => {
     let g = 0
     let b = 53
     let resetCalc;
-    if(resetAverage > 10)
-    {
+
+    if (resetAverage > 10)
         resetCalc = 10
-    }
-    else if(resetAverage < 0)
-    {
+    else if (resetAverage < 0)
         resetCalc = 0
-    }
-    else{
+    else
         resetCalc = resetAverage
-    }
-        
-    if(resetCalc < 6){
-        r = 31+((209-31)*resetCalc/6)
+
+    if (resetCalc < 6) {
+        r = 31 + ((209 - 31) * resetCalc / 6)
         g = 162
     }
-    else{
+    else {
         r = 209
-        g = 162-((162-53)*(resetCalc-6)/4)
+        g = 162 - ((162 - 53) * (resetCalc - 6) / 4)
     }
-                            
+
     return (
         <path d={d} fill={`rgb(${r},${g},${b})`} id={id} stroke={stroke} strokeWidth={strokeWidth} transform={transform}></path>
-        )
+    )
 }
 
 export default ReactButton
