@@ -22,7 +22,7 @@ class Event(BaseModel):
 @router.post("/webhook")
 def get_info(event: Event = Body()):
     if event.events[0]["type"] == "message" and contact.find_one({"in_charge": event.events[0]["message"]}):
-        fernet = Fernet(os.getenv("fernet_key"))
+        fernet = Fernet(os.getenv("fernet_key").encode())
         key = fernet.encrypt(event.events[0]["source"]["userID"])
         line.insert_one({"in_charge": event.events[0]["message"],
                          "secret_key": key.decode()})
