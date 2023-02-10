@@ -21,11 +21,11 @@ def add_amount(bin_id: int, trash_count: int):
     status = bin_status.find_one({"bin_id": bin_id})
     sent_message(trash_bin["in_charge"], trash_bin["bin_id"], trash_bin["zone"],
                  trash_bin["location"], status["status"])
-    return total_in_bin
+    return {"percentage": total_in_bin}
 
 
 @router.put("/{bin_id}/reset")
 def add_reset(bin_id: int):
     amount = bin_status.find_one({"bin_id": bin_id})["reset"] + 1
     bin_status.update_one({"bin_id": bin_id}, {"$set": {"reset": amount, "status": 0}})
-    return 1
+    return {"message": 0.0}
