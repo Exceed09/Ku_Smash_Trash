@@ -21,3 +21,8 @@ export async function setStatusBinId(id, status) {
     })
     return response.data
 }
+
+export async function getResetAverageInZone(zone) { // return floating
+    const response = await axios.get(" http://localhost:3004/reset")
+    return response.data.filter((bin) => bin.zone === zone)
+}

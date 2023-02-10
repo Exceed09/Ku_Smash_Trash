@@ -115,5 +115,19 @@
       "id": 8,
       "status": 90
     }
+  ],
+  "reset": [
+    {
+      "reset": 1.5,
+      "zone": "A"
+    },
+    {
+      "reset": 20,
+      "zone": "B"
+    },
+    {
+      "reset": 7,
+      "zone": "C"
+    }
   ]
 }
