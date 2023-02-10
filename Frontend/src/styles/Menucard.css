@@ -23,9 +23,9 @@
     background-color: beige;
 }
 
-.card:hover{
-    transform: scale(1.1);
-    transition: all 0.5 ease-in;
+.card:hover {
+    transform: scale(1.05);
+    transition: all 0.25s ease-in;
     filter: drop-shadow(4px 6px 3px rgb(0 0 0 / 0.3));
 }
 
