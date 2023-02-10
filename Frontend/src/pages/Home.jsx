@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getAllBinInZone, getAllBinStatus } from "../services/Request"
+import { getAllBinInZone, getAllBinStatus } from "../services/Request.js"
 import Card from "../components/Menucard"
 import BCard from "../components/Bigcard"
 import Nav from "../components/Nav"
