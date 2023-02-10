@@ -12,7 +12,7 @@ const  Status = ({num}) => {
         code = "#D13535"
     }   
     return (
-        <div style={{color:code, "font-weight":"bold"   }}>
+        <div style={{color:code, "fontWeight":"bold"   }}>
             {`Status : ${num} %`}
         </div>
     )

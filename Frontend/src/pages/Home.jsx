@@ -49,7 +49,7 @@ function Home() {
           <div className="home-menulist">
             {binList.map((item) => {
               return (
-                <Card {...item} changeclick={e => {
+                <Card key={item.id} {...item} changeclick={e => {
                   setBigCard(item)
                 }} />
               )
