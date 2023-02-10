@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getAllBinInZone, getAllStatus } from "../services/Request"
+import { getAllBinInZone, getAllBinStatus } from "../services/Request"
 import Card from "../components/Menucard"
 import BCard from "../components/Bigcard"
 import Nav from "../components/Nav"
@@ -30,7 +30,7 @@ function Home() {
       setBinList(responce)
     })
     const interval = setInterval(() => {
-      getAllStatus().then((responce) => {
+      getAllBinStatus().then((responce) => {
         setStatusList(responce)
       }).catch((err) => {
         console.log(err)
