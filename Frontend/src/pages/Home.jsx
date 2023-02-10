@@ -4,7 +4,6 @@ import Card from "../components/Menucard"
 import BCard from "../components/Bigcard"
 import Nav from "../components/Nav"
 import "../styles/Home.css"
-import { setStatusBinId } from "../services/Request"
 
 function Home() {
   const [statusList, setStatusList] = useState([])
@@ -54,7 +53,7 @@ function Home() {
           <div className="home-menulist">
             {binList.map((item) => {
               return (
-                <Card key={item.id} {...item} changeclick={e => {
+                <Card key={item.bin_id} {...item} changeclick={e => {
                   setBigCard(item)
                 }} />
               )

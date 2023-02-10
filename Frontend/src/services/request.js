@@ -20,6 +20,11 @@ export async function getResetAverageInZone() {
     return response.data.message[0]
 }
 
+export async function getBinById(id) {
+    const response = await axios.get(`http://group9.exceed19.online/all_bins/${id}/status`)
+    return response.data
+}
+
 // export async function setStatusBinId(id, status) {
 //     const response = await axios.put(` http://localhost:3004/status/${id}`, {
 //         status,
