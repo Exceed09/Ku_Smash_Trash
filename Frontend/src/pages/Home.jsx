@@ -15,7 +15,7 @@ function Home() {
   const UpdateStatus = (BinList, StatusList) => {
     BinList.forEach((item) => {
       StatusList.forEach((status) => {
-        if (item.id === status.id) {
+        if (item.bin_id === status.bin_id) {
           if (item.status != status.status) {
             item.status = status.status
             setBinList(BinList)
@@ -29,13 +29,18 @@ function Home() {
     getAllBinInZone(zone).then((responce) => {
       setBinList(responce)
     })
+    getAllBinStatus().then((responce) => {
+      setStatusList(responce)
+    }).catch((err) => {
+      console.log(err)
+    })
     const interval = setInterval(() => {
       getAllBinStatus().then((responce) => {
         setStatusList(responce)
       }).catch((err) => {
         console.log(err)
       })
-    }, 1000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [])
 

@@ -6,25 +6,30 @@ import { getResetAverageInZone } from '../services/Request';
 // min 0 green  rgb(31, 162, 53)
 
 const ReactButton = ({ zone, d, fill, id, stroke, strokeWidth, transform }) => {
-    const [resetAverage, setResetAverage] = React.useState(0)
+    const [resetAverage, setResetAverage] = useState(0)
 
     useEffect(() => {
+        getResetAverageInZone().then((responce) => {
+            setResetAverage(responce[zone])
+        }).catch((err) => {
+            console.log(err)
+        })
         const interval = setInterval(() => {
-            getResetAverageInZone(zone).then((responce) => {
-                if (responce.length > 0 && responce[0].reset != resetAverage)
-                    setResetAverage(responce[0].reset)
+            getResetAverageInZone().then((responce) => {
+                setResetAverage(responce[zone])
             }).catch((err) => {
                 console.log(err)
             }
             )
-        }, 1000);
+        }, 5000);
         return () => clearInterval(interval);
+
     }, [])
 
-    let r = 0
-    let g = 0
-    let b = 53
-    let resetCalc;
+    let r = 0.0
+    let g = 0.0
+    let b = 53.0
+    let resetCalc = 0.0;
 
     if (resetAverage > 10)
         resetCalc = 10
@@ -34,12 +39,12 @@ const ReactButton = ({ zone, d, fill, id, stroke, strokeWidth, transform }) => {
         resetCalc = resetAverage
 
     if (resetCalc < 6) {
-        r = 31 + ((209 - 31) * resetCalc / 6)
+        r = 31 + ((209 - 31) / 6.0 * resetCalc)
         g = 162
     }
     else {
         r = 209
-        g = 162 - ((162 - 53) * (resetCalc - 6) / 4)
+        g = 162 - ((162 - 53) / 4.0 * (resetCalc - 6))
     }
 
     return (
