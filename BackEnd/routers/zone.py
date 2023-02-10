@@ -1,25 +1,28 @@
 from fastapi import APIRouter, HTTPException
 import db
+import line_notification
 
 router = APIRouter(
     prefix="/zone",
     tags=["zone"]
 )
 
-zone_list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"]
+zone_list = ["A", "B", "C", "D1", "D2", "E", "F", "G", "H", "J", "K1", "K2", "L", "M"]
+
+def get_zone_reset(zone_name: str):
+    zone_reset = 0
+    bins = 0
+    for data in db.contact.find({"zone": zone_name}):
+        zone_reset += db.bin_status.find_one({"bin_id": data["bin_id"]})["reset"]
+        bins += 1
+    return round(zone_reset/bins, 3)
 
 @router.get("/reset_data")
 def get_reset_data():
-    zone_reset =  {"A": 0, "B": 0 , "C": 0, "D": 0,
-                    "E": 0, "F": 0, "G": 0, "H": 0,
-                    "I": 0, "J": 0, "K": 0, "L": 0, "M": 0}
-    for data in db.contact.find():
-        for index in range(zone_list.__len__()):
-            if data["zone"] ==  zone_list[index]:
-                for status in db.bin_status.find({"bin_id": data["bin_id"]}): 
-                    zone_reset[data["zone"]] += status["reset"]
-                    break
-                break
+    zone_reset =  {"A": 0, "B": 0 , "C": 0, "D1": 0, "D2": 0, "E": 0, "F": 0,
+                    "G": 0, "H": 0, "J": 0, "K1": 0, "K2": 0, "L": 0, "M": 0}
+    for zone in zone_list:
+        zone_reset[zone] = get_zone_reset(zone)
     return {"message": [zone_reset,{"mean": sum(zone_reset.values())/len(zone_reset)}]}
             
 
