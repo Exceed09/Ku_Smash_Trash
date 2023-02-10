@@ -36,7 +36,7 @@ def get_info(event: Event = Body()):
 
         fernet = Fernet(os.getenv("fernet_key").encode())
 
-        if line.find_one({"secret_key": fernet.encrypt((event.events[0]["source"]["userId"]).encode()).decode()}):
+        if line.find_one({"in_charge": event.events[0]["message"]["text"]}):
             try:
                 respond.push_message(event.events[0]["source"]["userId"],
                                      TextSendMessage(
@@ -50,6 +50,6 @@ def get_info(event: Event = Body()):
         try:
             respond.push_message(event.events[0]["source"]["userId"],
                                  TextSendMessage(
-                                     text="Name added successfully."))
+                                     text="Name added to database successfully."))
         except LineBotApiError as e:
             raise e
