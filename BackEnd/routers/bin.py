@@ -7,7 +7,7 @@ router = APIRouter(
 )
 
 TRASH_CAN_VOLUME = 501519.3  # cm^3
-TRASH_FILL_VOLUME = 3500.0  # cm^3
+TRASH_FILL_VOLUME = 2700.0  # cm^3
 
 
 @router.put("/{bin_id}/add/{trash_count}")
