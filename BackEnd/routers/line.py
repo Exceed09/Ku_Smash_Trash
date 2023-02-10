@@ -11,7 +11,6 @@ import os
 load_dotenv(".env")
 respond = linebot.LineBotApi(os.getenv("LINE_CHANNEL_ACCESS_TOKEN"))
 
-
 router = APIRouter(
     prefix="/line",
     tags=["line"]
@@ -26,14 +25,14 @@ class Event(BaseModel):
 @router.post("/webhook")
 def get_info(event: Event = Body()):
     if event.events[0]["type"] == "message":
-        if contact.find_one({"in_charge": event.events[0]["message"]["text"]}):
+        if not contact.find_one({"in_charge": event.events[0]["message"]["text"]}):
             try:
                 respond.push_message(event.events[0]["source"]["userId"],
-                                    TextSendMessage(
-                                        text="Your name not found in the database, please try another name."))
+                                     TextSendMessage(
+                                         text="Your name not found in the database, please try another name."))
             except LineBotApiError as e:
                 raise e
-            return
+            raise HTTPException(400, detail="Message send failed")
         fernet = Fernet(os.getenv("fernet_key").encode())
         key = fernet.encrypt(event.events[0]["source"]["userId"].encode())
         line.insert_one({"in_charge": event.events[0]["message"]["text"],
