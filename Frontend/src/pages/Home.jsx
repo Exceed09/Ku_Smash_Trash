@@ -24,6 +24,7 @@ function Home({ zone }) {
   }
 
   useEffect(() => {
+    setBigCard(null)
     getAllBinInZone(zone).then((responce) => {
       setBinList(responce)
     })
@@ -46,6 +47,7 @@ function Home({ zone }) {
 
   return !bigCard ? (
     <div>
+      <h1 className="card-menu-head" onClick={(e)=>window.scroll({top: "0", behavior: "smooth"})}>{` Zone : ${zone} `}</h1>
       <div className="home">
         <div className="home-center">
           <div className="home-menulist">
@@ -53,6 +55,7 @@ function Home({ zone }) {
               return (
                 <Card key={item.bin_id} {...item} changeclick={e => {
                   setBigCard(item)
+                  setTimeout(() => window.scroll({ top: "1400 ", behavior: "smooth" }), 100);
                 }} />
               )
             })}
@@ -63,6 +66,7 @@ function Home({ zone }) {
   ) :
     (
       <div>
+        <h1 className="card-menu-head" onClick={(e)=>window.scroll({top: "0", behavior: "smooth"})}>{` Zone : ${zone} `}</h1>
         <div className="home">
           <div className="home-center">
             <BCard {...bigCard} changeclick={e => {
