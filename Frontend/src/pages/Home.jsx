@@ -5,11 +5,10 @@ import BCard from "../components/Bigcard"
 import Nav from "../components/Nav"
 import "../styles/Home.css"
 
-function Home() {
+function Home({ zone }) {
   const [statusList, setStatusList] = useState([])
   const [binList, setBinList] = useState([])
   const [bigCard, setBigCard] = useState(null)
-  const zone = window.location.pathname.split("/")[2]
 
   const UpdateStatus = (BinList, StatusList) => {
     BinList.forEach((item) => {
@@ -41,13 +40,12 @@ function Home() {
       })
     }, 5000);
     return () => clearInterval(interval);
-  }, [])
+  }, [zone])
 
   UpdateStatus(binList, statusList)
 
   return !bigCard ? (
     <div>
-      <Nav />
       <div className="home">
         <div className="home-center">
           <div className="home-menulist">
@@ -65,7 +63,6 @@ function Home() {
   ) :
     (
       <div>
-        <Nav />
         <div className="home">
           <div className="home-center">
             <BCard {...bigCard} changeclick={e => {
