@@ -8,8 +8,8 @@ router = APIRouter(
     tags=["bin"]
 )
 
-TRASH_CAN_VOLUME = 501519.3  # cm^3
-TRASH_FILL_VOLUME = 2700.0  # cm^3
+TRASH_CAN_VOLUME = 24000.0  # cm^3
+TRASH_FILL_VOLUME = 600.0  # cm^3
 
 
 @router.get("/{bin_id}/add/{trash_count}")
