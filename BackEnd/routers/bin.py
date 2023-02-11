@@ -1,6 +1,7 @@
 from fastapi import APIRouter
-from db import bin_status, contact
+from db import bin_status, contact, line
 from line_notification import sent_message
+import time
 
 router = APIRouter(
     prefix="/bin",
@@ -19,8 +20,11 @@ def add_amount(bin_id: int, trash_count: int):
     bin_status.update_one({"bin_id": bin_id}, {"$set": {"status": total_in_bin}})
     trash_bin = contact.find_one({"bin_id": bin_id})
     status = bin_status.find_one({"bin_id": bin_id})
-    sent_message(trash_bin["in_charge"], trash_bin["bin_id"], trash_bin["zone"],
-                 trash_bin["location"], status["status"])
+    contract = line.find_one({"in_charge": trash_bin["in_charge"]})
+    if contract["recent_send_time"] == 0 and total_in_bin >= 80:
+        sent_message(trash_bin["in_charge"], trash_bin["bin_id"], trash_bin["zone"],
+                    trash_bin["location"], status["status"])
+        line.update_one({"in_charge": trash_bin["in_charge"]}, {"$set": {"recent_send_time": time.time()}})
     return {"percentage": total_in_bin}
 
 
@@ -28,4 +32,6 @@ def add_amount(bin_id: int, trash_count: int):
 def add_reset(bin_id: int):
     amount = bin_status.find_one({"bin_id": bin_id})["reset"] + 1
     bin_status.update_one({"bin_id": bin_id}, {"$set": {"reset": amount, "status": 0}})
+    trash_bin = contact.find_one({"bin_id": bin_id})
+    line.update_one({"in_charge": trash_bin["in_charge"]}, {"$set": {"recent_send_time": 0}}) 
     return {"message": 0.0}
