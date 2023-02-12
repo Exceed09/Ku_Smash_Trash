@@ -1,0 +1,27 @@
+#root {
+    height: auto;
+}
+
+html,
+body {
+    height: auto;
+    /* background-color: rgb(0, 97, 154); */
+    font-family: 'Jua', sans-serif;
+    font-size: 20px;
+    background: rgb(150, 207, 196);
+    background: radial-gradient(circle, rgba(150, 207, 196, 1) 0%, rgba(171, 200, 191, 1) 44%, rgba(103, 196, 215, 1) 100%);
+    background-size: contain;
+    background-position: center;
+}
+
+.search {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.search>input {
+    width: 90%;
+    border-radius: 5px;
+}

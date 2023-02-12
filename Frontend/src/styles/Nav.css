@@ -1,0 +1,31 @@
+.navbar {
+    display: flex;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    background-color: #489f93;
+    color: black;
+}
+
+.navbar-a {
+    transition: 0.3s;
+    display: flex;
+}
+
+.trash {
+    margin: auto;
+    padding: 5px;
+}
+
+.navbar-a:link {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar-a:visited {
+    color: black;
+}
+
+.navbar-a:hover {
+    color: aliceblue;
+}
